@@ -1,4 +1,4 @@
-package travel.management.system;
+package Transport_company;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -24,7 +24,7 @@ class SplashFrame extends JFrame implements Runnable{
     Thread t1;
     SplashFrame(){
         setLayout(new FlowLayout());
-        ImageIcon c1 = new ImageIcon(ClassLoader.getSystemResource("icons/truck.jpeg"));
+        ImageIcon c1 = new ImageIcon(ClassLoader.getSystemResource("Travel/Management/System/icons/splash.jpg"));
         Image i1 = c1.getImage().getScaledInstance(1030, 750,Image.SCALE_DEFAULT);
         ImageIcon i2 = new ImageIcon(i1);
         
@@ -39,10 +39,10 @@ class SplashFrame extends JFrame implements Runnable{
             Thread.sleep(7000);
             this.setVisible(false);
             
-            //Login l = new Login();
-          // l.setVisible(true);
+            Login l = new Login();
+            l.setVisible(true);
         }catch(Exception e){
-            //e.printStackTrace();
+            e.printStackTrace();
         }
     }
 }
